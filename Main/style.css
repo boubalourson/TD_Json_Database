@@ -1,0 +1,12 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.img-test {
+    width: 8em;
+}
+
+
+ion-icon {
+    font-size: 24px;
+  }
