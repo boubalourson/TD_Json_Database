@@ -20,10 +20,17 @@ fetch("Data/Movies.json")
     const movies = data.results;
     const movieElements = movies.map((movie) => {
       const div = document.createElement("div");
-      div.innerHTML = `<h2>${movie.original_title}</h2>
-                          <img src="${movie.poster_path}" alt="${movie.original_title} width:100px poster">
-                          <p>${movie.overview}</p>
-                          <p>Vote average: ${movie.vote_average}</p>`;
+      div.innerHTML = `   <article class="col col-md-6">
+                            <div class="row">
+                                  <h2>${movie.original_title}</h2>
+                                <div class="col-4">
+                                  <img class="img-test ml-5 rounded-3" src="${movie.poster_path}" alt="${movie.original_title} poster">
+                                </div>
+                                  <p>${movie.overview}</p>
+                                  <p>Vote average: ${movie.vote_average}</p>
+                              </div>
+                          </article>`;
+                          
       return div;
     });
     movieElements.forEach((element) => {
